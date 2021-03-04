@@ -1,0 +1,30 @@
+class society:
+    def __init__(self,society_name,house_no_of_mem,flat,income):
+        self.society_name=society_name
+        self.house_no_of_mem=house_no_of_mem
+        self.flat=flat
+        self.income=income
+    def inputdata(self):
+        self.society_name=input("enter socienty name:")
+        self.house_no_of_mem=input("enter hause number:")
+        self.income=int(input("enter income:"))
+    def Flat(self):
+        if self.income >= 25000:
+            self.flat=("atype")
+        elif self.income >= 20000 and self.income < 25000:
+            self.flat = ("btype")
+        elif self.income>=(15000) and self.income< 20000:
+            self.flat= ("ctype")
+        else:
+            self.flat =("dtype")
+
+    def show(self):
+        print("socienty name:", self.society_name)
+        print("house_no_of_mem:", self.house_no_of_mem)
+        print("flat type:", self.flat)
+        print("income:", self.income)
+
+s1 = society("nihat",54,"a",24000)
+s1.inputdata()
+s1.Flat()
+s1.show()
