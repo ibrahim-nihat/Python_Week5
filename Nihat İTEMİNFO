@@ -1,0 +1,31 @@
+class ITEMINFO:
+    def __init__(self,item_code=None,item=None,price=None,qty=None,discount=None,netprice=None):
+        self.item_code=item_code
+        self.item=item
+        self.price=price
+        self.qty=qty
+        self.discount=discount
+        self.netprice=netprice
+    def buy(self):
+        self.item_code=input("enter item's code:")
+        self.item=input("enter the item:")
+        self.price=int(input("enter the price:"))
+        self.qty=int(input("enter quantity:"))
+    def calculatediscount(self):
+        if self.qty <=10 :
+            self.discount= 0
+        elif self.qty >= 11 and self.qty<=20:
+            self.discount = 15
+        if self.qty >= 20:
+            self.discount = 20
+        self.netprice=(self.price*self.qty-self.discount)
+    def show(self):
+        print("item code :",self.item_code)
+        print("item :", self.item)
+        print("quantity:", self.qty)
+        print("item price:", self.price)
+        print("netprice :", self.netprice)
+i = ITEMINFO()
+i.buy()
+i.calculatediscount()
+i.show()
