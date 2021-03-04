@@ -1,0 +1,25 @@
+class Produckt:
+    def __init__(self,produckt_id=None,product_name=None,product_purchase_price=None,product_sale_price=None,margin=None,remark=None):
+        self.produckt_id=produckt_id
+        self.product_name=product_name
+        self.product_purchase_price=product_purchase_price
+        self.product_sale_price=product_sale_price
+        self.margin=margin
+        self.remark=remark
+    def setremark(self):
+        self.margin = (self.product_sale_price)-(self.product_purchase_price)
+        if self.margin >0:
+            self.remark="profit"
+        elif self.margin<0:
+            self.remark="loss"
+        else:
+            self.remark="neither profit nor loss"
+    def getdetails(self):
+        print(f"produckt id:{self.produckt_id}")
+        print(f"produckt name:{self.product_name}")
+        print(f"produckt purchase price:{self.product_purchase_price}")
+        print(f"produck sale price:{self.product_sale_price}")
+        print(f"remark:{self.remark}")
+P = Produckt()
+P.setremark()
+P.getdetails()
